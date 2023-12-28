@@ -12,7 +12,7 @@ spec:
     metadata:
       labels:
         app: guestbook-ui-3
-        tag: new-59449
+        tag: new-59
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
