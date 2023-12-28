@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: erem-argo
+  labels:
+    app: erem-backend-argo
+    owner: eTT
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: erem-backend-argo
+  template:
+    metadata:
+      labels:
+        app: erem-backend-argo
+    spec:
+      containers:
+      - name: erem
+        image: registry.k8s.io/busybox
+        args:
+        - /bin/sh
+        - -c
+        - touch /tmp/healthy; sleep 70; rm -f /tmp/healthy; sleep 600
+        livenessProbe:
+         exec:
+          command:
+          - cat
+          - /tmp/healthy
+         initialDelaySeconds: 5
+         periodSeconds: 5
+        resources:
+         requests:
+          cpu: 100m
+          memory: 500Mi
+         limits:
+          cpu: 500m
+          memory: 750Mi  
