@@ -4,7 +4,7 @@ metadata:
   name: erem-argo
   labels:
     app: erem-backend-argo
-    owner: eTT
+    owner: eTT2
 spec:
   replicas: 1
   selector:
