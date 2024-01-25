@@ -12,10 +12,10 @@ spec:
     metadata:
       labels:
         app: guestbook-ui-2
-        tag: new-201
+        tag: new-202
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.27
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
         name: guestbook-ui-2
         ports:
         - containerPort: 80
