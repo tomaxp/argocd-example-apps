@@ -11,6 +11,6 @@ spec:
       containers:
       - name: slack-notification
         image: curlimages/curl
-        command: ["sleep","150"]
+        command: ["sleep","700"]
       restartPolicy: Never
   backoffLimit: 2
