@@ -15,7 +15,7 @@ spec:
         tag: new-5995
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.285
         name: guestbook-ui-3
         ports:
         - containerPort: 80
